@@ -165,6 +165,15 @@ A **lambda function** in Python is a small, anonymous function defined with the 
     items = [(2, 'b'), (1, 'a'), (3, 'c')]
     sorted_items = sorted(items, key=lambda x: x)
     print(sorted_items)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+
+    ```
+    **Reduce function use**
+    ```python
+    from functools import reduce
+    numbers = [1, 2, 3, 4, 5]
+    result = reduce(lambda x, y: x * y, numbers)
+    print(result)  # Output: 120
+
     ```
 
 
