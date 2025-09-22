@@ -227,3 +227,20 @@ if __name__ = "__main__":
 2. `from os import mkdir` imports only specific function from package/lib
 
 > adding `__init__.py` empty file in a folder it converts it to python package But from python 3.3 we don't need to do it anymore it is now optional.
+
+
+# Yield
+
+```python
+def count_up_to(n):
+    count = 1
+    while count <= n:
+        yield count
+        count += 1
+
+gen = count_up_to(3)
+print(next(gen))  # Output: 1
+print(next(gen))  # Output: 2
+print(next(gen))  # Output: 3
+# next(gen) again will raise StopIteration
+```
